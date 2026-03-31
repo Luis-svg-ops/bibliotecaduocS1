@@ -20,4 +20,24 @@ public class LibroService {
     public Libro create(Libro libro) {
         return libroRepository.guardar(libro);
     }
+
+    public void datosFake(){
+        libroRepository.cargarLibrosFake();
+    }
+
+    public Libro readById(int id) {
+        return libroRepository.buscarporId(id);
+    }
+
+    public Libro readbyIsbn(String isbn) {
+        return libroRepository.buscarporIsbn(isbn);
+    }
+
+    public Libro updateLibro(int id, Libro libro) {
+        return libroRepository.modificarLibro(id,libro);
+    }
+
+    public boolean delete(int id) {
+        return libroRepository.eliminarLibro(id);
+    }
 }
